@@ -20,7 +20,7 @@ class CapicxxSomeipRuntimeConan(ConanFile):
         "fPIC": [ True, False ],
     }
     default_options = {
-        'shared': False,
+        'shared': True,
         'fPIC': True,
         'boost:shared': False,
         'capicxx-core-runtime:shared': True,
