@@ -33,7 +33,7 @@ class CapicxxSomeipRuntimeConan(ConanFile):
     source_branch = "master"
 
     def requirements(self):
-        self.requires("boost/1.71.0@%s/%s" % (self.user, self.channel))
+        self.requires("boost/1.72.0@%s/%s" % (self.user, self.channel))
         self.requires("capicxx-core-runtime/3.1.12.6@%s/%s" % (self.user, self.channel))
         self.requires("vsomeip/3.1.16.1@%s/%s" % (self.user, self.channel))
 
