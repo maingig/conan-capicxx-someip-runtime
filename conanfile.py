@@ -64,6 +64,8 @@ class CapicxxSomeipRuntimeConan(ConanFile):
         if 'fPIC' in self.options and self.options.fPIC:
             cmake.definitions["CMAKE_C_FLAGS"] = "-fPIC"
             cmake.definitions["CMAKE_CXX_FLAGS"] = "-fPIC"
+        if 'shared' in self.options:
+            cmake.definitions["BUILD_SHARED_LIBS"] = self.options.shared
         if 'USE_FILE' in self.env and len(self.env['USE_FILE']) > 0:
             cmake.definitions["USE_FILE"] = self.env['USE_FILE']
         if 'USE_CONSOLE' in self.env and len(self.env['USE_CONSOLE']) > 0:
