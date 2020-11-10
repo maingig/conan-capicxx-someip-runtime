@@ -23,6 +23,9 @@ class CapicxxSomeipRuntimeConan(ConanFile):
         'shared': True,
         'fPIC': True,
         'boost:shared': False,
+        'boost:without_context': True,
+        'boost:without_coroutine': True,
+        'boost:without_mpi': True,
         'capicxx-core-runtime:shared': True,
         'vsomeip:shared': True,
     }
